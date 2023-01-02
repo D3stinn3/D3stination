@@ -109,7 +109,6 @@ class FruityLoop:
         return self.the_math_behind_loops()
 
 
-
 f_o = FruityLoop(5)
 f_o.the_math_behind_loops()
 f_o.__repr__()
