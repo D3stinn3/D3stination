@@ -102,6 +102,7 @@ class FruityLoop:
         count = 0
         while count < self.maximum_count:
             count += 1
+            # this becomes the main stepwise counter
             print("Hello sIR!")
         print("-------------")
 
