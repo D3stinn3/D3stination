@@ -89,3 +89,27 @@ class Gen:
 first_gen = Gen(5)
 first_gen1 = first_gen.gen_func()
 print(first_gen1)
+
+"""While loops"""
+
+
+class FruityLoop:
+
+    def __init__(self, maximum_count):
+        self.maximum_count = maximum_count
+
+    def the_math_behind_loops(self):
+        count = 0
+        while count < self.maximum_count:
+            count += 1
+            print("Hello sIR!")
+        print("-------------")
+
+    def __repr__(self):
+        return self.the_math_behind_loops()
+
+
+
+f_o = FruityLoop(5)
+f_o.the_math_behind_loops()
+f_o.__repr__()
