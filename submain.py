@@ -113,3 +113,20 @@ class FruityLoop:
 f_o = FruityLoop(5)
 f_o.the_math_behind_loops()
 f_o.__repr__()
+
+
+def for_looping(param):
+    for i in range(param):
+        print(i)
+
+
+class ForLoops:
+
+    def __new__(cls, param):
+        return super().__new__(cls)
+
+    def __init__(self, param):
+        print("{0}".format(param))
+
+
+ForLoops(dict(a=1, b=2))
