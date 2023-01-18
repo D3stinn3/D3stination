@@ -3,11 +3,11 @@ print("Hello World!")
 
 class Sample:
     def __new__(cls, parameter):
-        print("New param invoked ", parameter)
+        print("New param invoked as... ", parameter)
         return super().__new__(cls)
 
     def __init__(self, parameter):
-        print("Init param invoked", parameter)
+        print("Init param invoked as... ", parameter)
 
 
 obj = Sample("Destinne")
@@ -22,8 +22,12 @@ class Streams:
     def __str__(self):
         return f"%s, %s" % (self.class_name, self.class_number)
 
+    def __new__(cls, new_item, **kwargs):
+        print("New argument invoked as... ", new_item)
+        # return super.__new__(cls)
 
-Classifications = Streams('4 EAST', '21')
+
+Classifications = Streams('4 EAST')
 print(Classifications)
 
 """Intricate Add Functions"""
@@ -87,8 +91,10 @@ class Gen:
 
 
 first_gen = Gen(5)
+first_ge = first_gen.gen_func().__next__()
 first_gen1 = first_gen.gen_func()
 print(first_gen1)
+print(first_ge)
 
 """While loops"""
 
