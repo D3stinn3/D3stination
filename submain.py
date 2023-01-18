@@ -136,3 +136,36 @@ class ForLoops:
 
 
 ForLoops(dict(a=1, b=2))
+
+"""The real use of dunder methods"""
+
+
+class MyNumber:
+    def __init__(self, value):
+        self.value = value
+
+    def __add__(self, other):
+        return MyNumber(self.value + other.value)
+
+    def __sub__(self, other):
+        return MyNumber(self.value - other.value)
+
+    def __mul__(self, other):
+        return MyNumber(self.value * other.value)
+
+    def __truediv__(self, other):
+        return MyNumber(self.value / other.value)
+
+    def __str__(self):
+        return str(self.value)
+
+
+a = MyNumber(10)
+b = MyNumber(20)
+
+print(a + b)
+print(a - b)
+print(a * b)
+print(a / b)
+
+
